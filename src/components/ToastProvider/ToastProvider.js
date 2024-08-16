@@ -15,7 +15,7 @@ function ToastProvider({ children }) {
     window.addEventListener("keydown", dismissAll);
 
     return () => {
-      window.addEventListener("keydown", dismissAll);
+      window.removeEventListener("keydown", dismissAll);
     };
   }, []);
 
